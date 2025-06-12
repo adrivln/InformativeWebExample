@@ -1,0 +1,346 @@
+html{
+    font-family: sans-serif;
+    color: white;
+    height: 96vh;
+    width: 97vw;
+}
+body{
+
+    height: 100%;
+    width: 100%;
+    background-image: url("Images/FondoMAIN.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+#myBtn {
+    text-decoration: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: cyan;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: cyan;
+}
+
+
+
+
+.container2{
+    grid-area: enlaces;
+    display: grid; /* Creo estilo con dos columnas y una fila */
+    grid-template-rows: 1fr ;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 'nav logo';
+    align-items: flex-end;
+    flex-grow: 1; /* Hago que ocupe tod */
+    gap: 90px;  /*Separo el navbar del logo*/
+
+
+}
+#mainbody{
+    height: 85%;
+    width: 100%;
+    display:grid;
+    grid-template-rows:2fr 8fr ;
+    grid-template-columns:2fr 6fr 2fr ;
+    grid-template-areas:'. enlaces .'
+                        '. cajas .';
+    align-items: center ;
+
+}
+
+
+.box-1{
+    grid-area: box1 ;
+    justify-items: center;
+
+}
+.box-1:hover{
+    scale: 1.2;
+}
+.box-2{
+    grid-area: box2;
+    justify-items: center;
+
+}
+.box-2:hover{
+    scale: 1.2;
+}
+.box-3{
+    grid-area: box3;
+    justify-items: center;
+}
+.box-3:hover{
+    scale: 1.2;
+}
+.box-4{
+    grid-area: box4;
+    justify-items: center;
+}
+.box-4:hover{
+    scale: 1.2;
+}
+.box-5{
+    grid-area: box5;
+    justify-items: center;
+}
+.box-5:hover{
+    scale: 1.2;
+}
+img{
+    border-radius: 4em;
+
+}
+
+#maingrid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    grid-area: cajas;
+    padding: 20px;
+    justify-content: space-evenly;
+
+}
+
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    justify-items: center;
+
+
+}
+
+.container3{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+
+}
+
+.container4{
+    justify-items: center;
+
+}
+
+
+
+
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.7rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    padding-right: 170px;
+    text-align: end;
+
+
+}
+
+.small{
+    font-size: 14px;
+
+}
+
+header{
+    grid-area: title;
+    text-align: center;
+    font-size: x-large;
+    color:cyan;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    grid-area: logo;
+
+}
+.logo:hover{
+    scale: 1.3;
+}
+
+img{
+    width: 225px;
+    height: 175px;
+    border: 2px solid cyan;
+}
+
+img:hover{
+    animation: imageMove 5s ease 0s infinite normal forwards;
+
+}
+
+@keyframes imageMove {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 0 50%;
+    }
+
+    10% {
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+.navbar{
+    grid-area: nav;
+}
+.nav{
+    display: flex;
+    border: 3px solid cyan;
+    background-color: white;
+    border-radius: 2em;
+}
+.nav > li{
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+}
+header h1{
+    animation: centrar 1s linear ;
+}
+@keyframes centrar {
+    0%{
+        transform: translateX(-100%);
+    }
+
+}
+header p{
+    animation: centrar2 1s linear;
+}
+@keyframes centrar2 {
+    0%{
+        transform: translateX(100%);
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+
+    #mainbody{
+        display:grid;
+        grid-template-rows:auto auto ;
+        grid-template-columns:auto ;
+        grid-template-areas:'enlaces'
+                            'cajas';
+    }
+    .container2{
+        display:grid;
+        grid-template-rows:auto auto ;
+        grid-template-columns:auto ;
+        grid-template-areas:'nav'
+                            'logo';
+
+    }
+    .nav{
+        flex-direction: column;
+        background-color: cyan;
+        padding: 2%;
+        margin-right: 10%;
+        margin-left: 5%;
+    }
+    .logo{
+        margin-left: 5%;
+        animation: lateral 3s ease infinite alternate;
+        display: inline-block;
+    }
+    .logo:hover{
+        scale:1;
+    }
+
+    @keyframes lateral {
+        0% {
+
+        }
+        100% {
+            transform: translateX(200%);
+        }
+        
+    }
+
+    header{
+        color: hotpink;
+    }
+
+    footer{
+        display: flex;
+        text-align: right;
+    }
+    .container1{
+        flex-direction:column;
+        flex-grow: 1;
+
+
+    }
+    .container3{
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .container4{
+        flex-grow: 1;
+        text-align: center;
+    }
+    footer{
+        opacity: 0;
+    }
+}
+
+
+
+

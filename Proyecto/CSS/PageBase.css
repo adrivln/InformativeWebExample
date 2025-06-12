@@ -1,0 +1,225 @@
+html{
+    font-family: sans-serif;
+    color: white;
+    height: 100vh;
+    width: 97vw;
+}
+body{
+
+    height: 100%;
+    width: 100%;
+    background-image: url("Images/FondoMAIN.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+#myBtn {
+    text-decoration: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: cyan;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: cyan;
+}
+#goindex {
+    text-decoration: none;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: cyan;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#goindex:hover {
+    background-color: cyan;
+}
+
+footer{
+    padding-right: 170px;
+    text-align: end;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+header{
+    justify-items: center;
+    align-content: center;
+    color: cyan;
+}
+ul{
+    display: flex;
+    flex-direction: row ;
+    font-size: 15px;
+    gap: 35px;
+}
+
+#texto{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: '. intro .'
+                         '. primero .'
+                         '. segundo .'
+                         '. tercero .'
+                         '. final .'
+                         '. final2 .';
+    flex-grow: 1;
+    gap: 15px;
+}
+
+.introduccion{
+    margin-top: 20px;
+    grid-area: intro;
+    flex-grow: 1;
+    height: 10%;
+    border-top: 5px solid cyan;
+
+}
+.parte1{
+    grid-area: primero;
+    flex-grow: 1;
+    border-bottom: 5px solid cyan;
+
+}
+.parte2{
+    grid-area: segundo;
+    flex-grow: 1;
+    border-bottom: 5px solid cyan;
+}
+.parte3{
+    grid-area: tercero;
+    flex-grow: 1;
+    border-bottom: 5px solid cyan;
+}
+.conclusion{
+    grid-area: final;
+    flex-grow: 1;
+    border-bottom: 5px solid cyan;
+}
+.conclusion2{
+    grid-area: final2;
+    flex-grow: 1;
+    border-bottom: 5px solid cyan;
+}
+
+img{
+    border-radius: 1em;
+
+}
+
+.parte1 img, .parte2 img, .parte3 img {
+    animation: scroll 10s linear infinite alternate;
+    display: inline-block;
+}
+
+/* Animación para desplazar las imágenes de derecha a izquierda */
+@keyframes scroll {
+    0% {
+
+    }
+    100% {
+        transform: translateX(1375%);
+    }
+}
+
+table{
+    grid-area: primero;
+    border-collapse: collapse;
+    border: 5px solid cyan;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+table thead{
+    background-color: black;
+}
+
+table tr td{
+    padding: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 50%;
+    margin-bottom: 20px;
+    animation: Logo 1s ease-in infinite alternate ;
+    border-radius: 3em;
+}
+
+
+@keyframes Logo {
+    0%{
+        transform: translateY(18%);
+
+    }
+    100%{
+        transform: translateY(-25%) ;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    #texto{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: '. intro .'
+                         '. primero .'
+                         '. segundo .'
+                         '. tercero .'
+                         '. final .'
+                         '. final2 .';
+        flex-grow: 1;
+        gap: 15px;
+    }
+    header{
+        text-align: center;
+    }
+    .logo{
+        margin-left: 30%;
+    }
+    @keyframes Logo {
+        100%{
+            transform: translateY(0%);
+        }
+    }
+    @keyframes scroll {
+        0% {
+
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
